@@ -10,11 +10,10 @@ def add_farmer(request):
     else:
         form = FarmerForm()
     return render(request, 'attendance/add_farmer.html', {'form': form})
+
 def farmer_list(request):
     farmers = Farmer.objects.all()
     return render(request, 'attendance/farmer_list.html', {'farmers': farmers})
-
-
 
 
 

@@ -6,7 +6,7 @@ from .models import Farmer, Attendance
 class FarmerForm(forms.ModelForm):
     class Meta:
         model = Farmer
-        fields = ['name','farm']
+        fields = ['name','farm','age']
        
        #to get all fields at the same time without specifying them
        # fields='__all__' 
@@ -20,6 +20,10 @@ class FarmerForm(forms.ModelForm):
                 'class':'form-control',
                 'placeholder':'Enter farm name'
         }),
+         'age': forms.NumberInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Enter farmer age'
+            }),
         }
 
         # #form for Attendance model
